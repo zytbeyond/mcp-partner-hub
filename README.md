@@ -30,6 +30,10 @@ Finding the right MCP server can be challenging. This repository aims to:
 | [SeaTunnel](./docs/seatunnel.md) | Data integration platform | [GitHub](https://github.com/ocean-zhc/seatunnel-mcp) | - |
 | [Snowflake](./docs/snowflake.md) | Data cloud platform | [GitHub](https://github.com/isaacwasserman/mcp-snowflake-server) | - |
 | [Dify](./docs/dify.md) | LLMOps platform | [GitHub](https://github.com/YanxingLiu/dify-mcp-server) | [Blog](https://dify.ai/blog/dify-mcp-plugin-hands-on-guide-integrating-zapier-for-effortless-agent-tool-calls) |
+| [MongoDB](./docs/mongodb.md) | Document-oriented NoSQL database | [GitHub](https://github.com/mongodb-developer/mongodb-mcp-server) | - |
+| [Apache Doris & VeloDB](./docs/doris.md) | High-performance analytical database | [GitHub](https://github.com/morningman/mcp-doris) | - |
+| [Confluent](./docs/confluent.md) | Data streaming platform based on Apache Kafka | [GitHub](https://github.com/confluentinc/mcp-confluent) | - |
+| [PagerDuty](./docs/pagerduty.md) | Incident management platform | [GitHub](https://github.com/wpfleger96/pagerduty-mcp-server) | - |
 
 ## Contributing
 
