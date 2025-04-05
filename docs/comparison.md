@@ -13,19 +13,26 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | [Databricks](./databricks.md) | Unified Analytics Platform | Data engineering, data science, ML | Data science, machine learning, analytics |
 | [SeaTunnel](./seatunnel.md) | Data Integration Platform | Real-time data synchronization | ETL processes, data pipelines |
 | [Dify](./dify.md) | LLMOps Platform | Application management, Zapier integration | AI application development, LLM orchestration |
+| [MongoDB](./mongodb.md) | Document-oriented NoSQL Database | Schema-free, aggregation pipelines | Web applications, content management, real-time analytics |
+| [Apache Doris & VeloDB](./doris.md) | MPP Analytical Database | High-performance, real-time analytics | OLAP workloads, business intelligence, dashboards |
+| [Confluent](./confluent.md) | Data Streaming Platform | Event streaming, topic management | Real-time data pipelines, event-driven architectures |
+| [PagerDuty](./pagerduty.md) | Incident Management Platform | On-call scheduling, incident tracking | DevOps, SRE, IT operations |
 
 ## Feature Comparison
 
-| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify |
-|---------|--------|-----------|-----------|-----------|------------|-----------|------|
-| SQL Support | Limited | Full | Full | Full | Full | Limited | No |
-| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ |
-| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ |
-| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ |
-| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
-| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify | MongoDB | Doris/VeloDB | Confluent | PagerDuty |
+|---------|--------|-----------|-----------|-----------|------------|-----------|------|---------|-------------|-----------|----------|
+| SQL Support | Limited | Full | Full | Full | Full | Limited | No | Limited | Full | Limited | No |
+| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ |
+| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Event Streaming | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Incident Management | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Document Storage | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
 
 ## Implementation Complexity
 
@@ -38,6 +45,10 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | Databricks | Medium | Medium | Medium |
 | SeaTunnel | Medium | Medium | Medium |
 | Dify | Low | Low | Low |
+| MongoDB | Low | Low | Low |
+| Apache Doris & VeloDB | Medium | Medium | Medium |
+| Confluent | Medium | High | Medium |
+| PagerDuty | Low | Low | Low |
 
 ## Use Case Scenarios
 
@@ -82,3 +93,30 @@ This document provides a comparison of the various ISV partner MCP servers to he
 - Integrating AI with external tools via Zapier
 - Managing datasets for AI applications
 - Tracking conversation history in AI applications
+
+### When to use MongoDB
+- Web applications with flexible schema requirements
+- Content management systems
+- Real-time analytics on document data
+- Applications requiring horizontal scaling
+- Projects needing JSON-like document storage
+
+### When to use Apache Doris & VeloDB
+- OLAP workloads requiring high performance
+- Business intelligence dashboards
+- Real-time reporting systems
+- Interactive analytics on large datasets
+
+### When to use Confluent
+- Event-driven architectures
+- Real-time data pipelines
+- Stream processing applications
+- Message queuing and pub/sub systems
+- Applications requiring data integration across multiple systems
+
+### When to use PagerDuty
+- DevOps and SRE teams managing on-call rotations
+- IT operations requiring incident management
+- Teams needing automated escalation policies
+- Organizations requiring incident tracking and analytics
+- Services requiring reliable alerting and notification systems
