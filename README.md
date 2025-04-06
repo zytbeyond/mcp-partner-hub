@@ -34,6 +34,7 @@ Finding the right MCP server can be challenging. This repository aims to:
 | [Apache Doris & VeloDB](./docs/doris.md) | High-performance analytical database | [GitHub](https://github.com/morningman/mcp-doris) | - |
 | [Confluent](./docs/confluent.md) | Data streaming platform based on Apache Kafka | [GitHub](https://github.com/confluentinc/mcp-confluent) | - |
 | [PagerDuty](./docs/pagerduty.md) | Incident management platform | [GitHub](https://github.com/wpfleger96/pagerduty-mcp-server) | - |
+| [TiDB](./docs/tidb.md) | Distributed SQL database | [GitHub](https://github.com/c4pt0r/mcp-server-tidb) | - |
 
 ## Contributing
 

@@ -17,22 +17,23 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | [Apache Doris & VeloDB](./doris.md) | MPP Analytical Database | High-performance, real-time analytics | OLAP workloads, business intelligence, dashboards |
 | [Confluent](./confluent.md) | Data Streaming Platform | Event streaming, topic management | Real-time data pipelines, event-driven architectures |
 | [PagerDuty](./pagerduty.md) | Incident Management Platform | On-call scheduling, incident tracking | DevOps, SRE, IT operations |
+| [TiDB](./tidb.md) | Distributed SQL Database | Horizontal scalability, HTAP capabilities | Cloud-native applications, hybrid workloads |
 
 ## Feature Comparison
 
-| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify | MongoDB | Doris/VeloDB | Confluent | PagerDuty |
-|---------|--------|-----------|-----------|-----------|------------|-----------|------|---------|-------------|-----------|----------|
-| SQL Support | Limited | Full | Full | Full | Full | Limited | No | Limited | Full | Limited | No |
-| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ |
-| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Event Streaming | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| Incident Management | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Document Storage | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify | MongoDB | Doris/VeloDB | Confluent | PagerDuty | TiDB |
+|---------|--------|-----------|-----------|-----------|------------|-----------|------|---------|-------------|-----------|----------|------|
+| SQL Support | Limited | Full | Full | Full | Full | Limited | No | Limited | Full | Limited | No | Full |
+| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ | ✅ |
+| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Event Streaming | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Incident Management | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Document Storage | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 
 ## Implementation Complexity
 
@@ -49,6 +50,7 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | Apache Doris & VeloDB | Medium | Medium | Medium |
 | Confluent | Medium | High | Medium |
 | PagerDuty | Low | Low | Low |
+| TiDB | Medium | Medium | Medium |
 
 ## Use Case Scenarios
 
@@ -120,3 +122,10 @@ This document provides a comparison of the various ISV partner MCP servers to he
 - Teams needing automated escalation policies
 - Organizations requiring incident tracking and analytics
 - Services requiring reliable alerting and notification systems
+
+### When to use TiDB
+- Applications requiring horizontal scalability
+- Cloud-native applications with high availability needs
+- Hybrid transactional and analytical processing (HTAP) workloads
+- Systems that need MySQL compatibility with distributed capabilities
+- Applications that need to scale out without complex sharding
