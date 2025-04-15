@@ -14,21 +14,27 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | [SeaTunnel](./seatunnel.md) | Data Integration Platform | Real-time data synchronization | ETL processes, data pipelines |
 | [Dify](./dify.md) | LLMOps Platform | Application management, Zapier integration | AI application development, LLM orchestration |
 | [TiDB](./tidb.md) | Distributed SQL Database | Horizontal scalability, HTAP capabilities | Cloud-native applications, hybrid workloads |
+| [MongoDB](./mongodb.md) | Document Database | Document storage, aggregation pipelines | Flexible schema applications, JSON data |
+| [Apache Doris](./doris.md) | MPP Analytical Database | High-performance queries, real-time analytics | Business intelligence, OLAP workloads |
+| [Confluent](./confluent.md) | Data Streaming Platform | Real-time data streams, Kafka management | Event streaming, real-time data processing |
+| [PagerDuty](./pagerduty.md) | Incident Management Platform | Alerting, on-call scheduling, escalation | DevOps, SRE, incident response |
 | [Clickzetta](./clickzetta.md) | Data Analytics Platform | Multi-dimensional analysis, data insights | Retail analytics, e-commerce data analysis |
 | [ProtonBase](./protonbase.md) | Distributed DataWarebase | PostgreSQL compatibility, vector support | Unified data storage, multi-modal data analysis |
 
 ## Feature Comparison
 
-| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify | TiDB | Clickzetta | ProtonBase |
-|---------|--------|-----------|-----------|-----------|------------|-----------|------|------|-----------|------------|
-| SQL Support | Limited | Full | Full | Full | Full | Limited | No | Full | Full | Full |
-| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ |
-| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ |
-| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ |
-| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ |
-| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ | ❌ |
-| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Feature | Zilliz | OceanBase | StarRocks | Snowflake | Databricks | SeaTunnel | Dify | TiDB | MongoDB | Doris | Confluent | PagerDuty | Clickzetta | ProtonBase |
+|---------|--------|-----------|-----------|-----------|------------|-----------|------|------|---------|-------|-----------|-----------|-----------|------------|
+| SQL Support | Limited | Full | Full | Full | Full | Limited | No | Full | Limited | Full | Limited | No | Full | Full |
+| Vector Search | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Real-time Analytics | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Data Integration | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ |
+| Machine Learning | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Data Sharing | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ |
+| LLM Integration | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Cloud Native | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Event Streaming | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Incident Management | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 
 ## Implementation Complexity
 
@@ -42,6 +48,10 @@ This document provides a comparison of the various ISV partner MCP servers to he
 | SeaTunnel | Medium | Medium | Medium |
 | Dify | Low | Low | Low |
 | TiDB | Medium | Medium | Medium |
+| MongoDB | Low | Low | Medium |
+| Apache Doris | Medium | Medium | Medium |
+| Confluent | Medium | Medium | Medium |
+| PagerDuty | Low | Low | Low |
 | Clickzetta | Medium | Medium | Low |
 | ProtonBase | Medium | Medium | Medium |
 
@@ -95,6 +105,34 @@ This document provides a comparison of the various ISV partner MCP servers to he
 - Hybrid transactional and analytical processing (HTAP) workloads
 - Systems that need MySQL compatibility with distributed capabilities
 - Applications that need to scale out without complex sharding
+
+### When to use MongoDB
+- Applications with flexible schema requirements
+- Working with JSON or document-oriented data
+- Projects requiring fast development iterations
+- Applications needing horizontal scaling for reads
+- Complex data aggregation and analytics on document data
+
+### When to use Apache Doris
+- High-performance analytical workloads
+- Real-time OLAP applications
+- Interactive dashboards and reporting
+- Systems requiring SQL compatibility with MPP architecture
+- Applications needing fast query response on large datasets
+
+### When to use Confluent
+- Event-driven architectures
+- Real-time data streaming applications
+- Systems requiring message queuing and event processing
+- Applications needing to process data in motion
+- Integration of multiple data sources and sinks
+
+### When to use PagerDuty
+- DevOps and SRE teams managing incidents
+- Organizations requiring on-call scheduling and rotation
+- Teams needing automated escalation policies
+- Systems requiring incident response coordination
+- Applications needing to integrate alerting across tools
 
 ### When to use Clickzetta
 - Retail and e-commerce data analytics
