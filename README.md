@@ -31,6 +31,10 @@ Finding the right MCP server can be challenging. This repository aims to:
 | [Snowflake](./docs/snowflake.md) | Data cloud platform | [GitHub](https://github.com/isaacwasserman/mcp-snowflake-server) | - |
 | [Dify](./docs/dify.md) | LLMOps platform | [GitHub](https://github.com/YanxingLiu/dify-mcp-server) | [Blog](https://dify.ai/blog/dify-mcp-plugin-hands-on-guide-integrating-zapier-for-effortless-agent-tool-calls) |
 | [TiDB](./docs/tidb.md) | Distributed SQL database | [GitHub](https://github.com/c4pt0r/mcp-server-tidb) | - |
+| [Confluent](./docs/confluent.md) | Data streaming platform | [GitHub](https://github.com/confluentinc/mcp-confluent) | - |
+| [MongoDB](./docs/mongodb.md) | Document database | [GitHub](https://github.com/mongodb/mcp-mongodb) | - |
+| [Apache Doris](./docs/doris.md) | Real-time analytical database | [GitHub](https://github.com/apache/doris-mcp) | - |
+| [PagerDuty](./docs/pagerduty.md) | Incident management platform | [GitHub](https://github.com/pagerduty/mcp-pagerduty) | - |
 | [Clickzetta](./docs/clickzetta.md) | Cloud-native data analytics platform | [GitHub](https://github.com/yunqiqiliang/mcp-clickzetta-server) | - |
 | [ProtonBase](./docs/protonbase.md) | PostgreSQL-compatible database | [GitHub](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres) | - |
 
